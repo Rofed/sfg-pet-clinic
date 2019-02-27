@@ -44,7 +44,6 @@
         <developerConnection>
             scm:git:https://github.com/Rofed/sfg-pet-clinic.git
         </developerConnection>
-
         <tag>HEAD</tag>
     </scm>
 
