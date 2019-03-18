@@ -37,5 +37,6 @@ public class OwnerController {
         ModelAndView mav = new ModelAndView("owners/ownerDetails");
         mav.addObject(ownerService.findById(Long.valueOf(ownerId)));
         return mav;
+
     }
 }
