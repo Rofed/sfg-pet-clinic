@@ -38,13 +38,11 @@ public class Owner extends Person {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
-    public Pet addPet(Pet petToAdd) {
-        if (petToAdd != null) {
-            this.pets.add(petToAdd);
-            petToAdd.setOwner(this);
-            return petToAdd;
+    public void addPet(Pet petToAdd) {
+        if (petToAdd.isNew()) {
+           this.pets.add(petToAdd);
         }
-        return null;
+        petToAdd.setOwner(this);
     }
 
     /**
